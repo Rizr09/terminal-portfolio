@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 225 27% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 225 27% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 234 35% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 23% 27%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 223 13% 28%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 98% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 226 23% 27%;
+    --input: 226 23% 27%;
+    --ring: 220 98% 61%;
+    --radius: 0.5rem;
+
+    /* Tokyo Night Colors */
+    --tokyo-bg: #1a1b26;
+    --tokyo-fg: #a9b1d6;
+    --tokyo-accent: #7aa2f7;
+    --tokyo-purple: #bb9af7;
+    --tokyo-green: #9ece6a;
+    --tokyo-orange: #ff9e64;
+    --tokyo-red: #f7768e;
+    --tokyo-cyan: #7dcfff;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 225 27% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 225 27% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 234 35% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 23% 27%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 223 13% 28%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 98% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 226 23% 27%;
+    --input: 226 23% 27%;
+    --ring: 220 98% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--tokyo-bg);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #3d59a1;
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #7aa2f7;
+}
+
+/* ASCII Animation */
+@keyframes asciiAnimation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.ascii-animate {
+  animation: asciiAnimation 2s infinite;
+  font-family: monospace;
+  white-space: pre;
+  line-height: 1;
+  color: var(--tokyo-purple);
+}
+
