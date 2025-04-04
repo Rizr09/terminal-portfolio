@@ -1,0 +1,2 @@
+env:
+  NEXT_PUBLIC_LAST_FM: ${{ secrets.NEXT_PUBLIC_LAST_FM }}
