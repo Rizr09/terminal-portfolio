@@ -1,5 +1,4 @@
 import type React from "react"
-import { ArrowRight } from "lucide-react"
 
 interface CommandHistoryProps {
   commands: Array<{
@@ -15,15 +14,16 @@ export default function CommandHistory({ commands }: CommandHistoryProps) {
         <div key={index} className={command.output ? "space-y-2 mb-3" : "mb-1"}>
           <div className="flex items-center flex-wrap">
             <div className="flex items-center mr-2">
-              <span className="text-[#7dcfff]">guest</span>
-              <span className="text-[#a9b1d6]">@</span>
-              <span className="text-[#bb9af7]">portfolio</span>
-              <span className="text-[#a9b1d6]">:</span>
-              <span className="text-[#7aa2f7]">~</span>
-              <span className="text-[#a9b1d6]">$</span>
-              <ArrowRight className="h-4 w-4 ml-2 text-[#9ece6a]" />
+              <span className="text-[#bb9af7] font-bold">λ</span>
+              <span className="text-[#7aa2f7] mx-1 font-bold">guest</span>
+              <span className="text-[#565f89]">in</span>
+              <span className="text-[#7dcfff] mx-1 font-bold">portfolio</span>
+              <span className="text-[#565f89] mx-0.5">:</span>
+              <span className="text-[#9ece6a] font-bold">~</span>
+              <span className="text-[#c0caf5] ml-1.5 mr-0.5">$</span>
+              <span className="text-[#7aa2f7] font-bold">❯</span>
             </div>
-            <span className="text-[#a9b1d6] break-all">{command.input}</span>
+            <span className="text-[#c0caf5] break-all">{command.input}</span>
           </div>
           {command.output && <div className="break-words">{command.output}</div>}
         </div>

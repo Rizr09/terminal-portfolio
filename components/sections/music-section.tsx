@@ -290,7 +290,7 @@ export function MusicSection() {
     <div className="space-y-4 animate-fadeIn">
       <h2 className="text-xl font-bold text-[#bb9af7] flex items-center">
         <Music className="mr-2 h-5 w-5 text-[#7aa2f7]" />
-        All About My Music Taste
+        All About My Music
       </h2>
 
       {data.isLoading ? (

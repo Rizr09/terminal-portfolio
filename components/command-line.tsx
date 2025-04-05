@@ -93,13 +93,14 @@ export default function CommandLine({ onExecute }: CommandLineProps) {
   return (
     <form onSubmit={handleSubmit} className="flex items-center flex-wrap mt-2">
       <div className="flex items-center mr-2 font-fira-code">
-        <span className="text-[#7dcfff]">guest</span>
-        <span className="text-[#a9b1d6]">@</span>
-        <span className="text-[#bb9af7]">portfolio</span>
-        <span className="text-[#a9b1d6]">:</span>
-        <span className="text-[#7aa2f7]">~</span>
-        <span className="text-[#a9b1d6]">$</span>
-        <ArrowRight className="h-4 w-4 ml-2 text-[#9ece6a]" />
+        <span className="text-[#bb9af7] font-bold">λ</span>
+        <span className="text-[#7aa2f7] mx-1 font-bold">guest</span>
+        <span className="text-[#565f89]">in</span>
+        <span className="text-[#7dcfff] mx-1 font-bold">portfolio</span>
+        <span className="text-[#565f89] mx-0.5">:</span>
+        <span className="text-[#9ece6a] font-bold">~</span>
+        <span className="text-[#c0caf5] ml-1.5 mr-0.5">$</span>
+        <span className="text-[#7aa2f7] font-bold">❯</span>
       </div>
       <input
         ref={inputRef}
@@ -107,7 +108,7 @@ export default function CommandLine({ onExecute }: CommandLineProps) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="flex-1 bg-transparent outline-none border-none text-[#a9b1d6] min-w-0 font-fira-code"
+        className="flex-1 bg-transparent outline-none border-none text-[#c0caf5] min-w-0 font-fira-code"
         aria-label="Command input"
         autoComplete="off"
         spellCheck="false"
