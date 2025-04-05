@@ -15,6 +15,7 @@ interface Track {
   }>
   date?: {
     "#text": string
+    uts?: string
   }
   "@attr"?: {
     nowplaying?: string
@@ -40,30 +41,40 @@ export function MusicSection() {
     error: null,
   })
   const [activeTab, setActiveTab] = useState<"recent" | "weekly" | "top">("recent")
+  const [loadingText, setLoadingText] = useState("Loading music data")
+
+  // Terminal-style loading animation
+  useEffect(() => {
+    if (data.isLoading) {
+      const loadingInterval = setInterval(() => {
+        setLoadingText((prev) => {
+          if (prev.endsWith("...")) return "Loading music data"
+          return prev + "."
+        })
+      }, 500)
+
+      return () => clearInterval(loadingInterval)
+    }
+  }, [data.isLoading])
 
   useEffect(() => {
     const fetchMusicData = async () => {
       try {
-        const apiKey = process.env.NEXT_PUBLIC_LAST_FM
-        if (!apiKey) {
-          throw new Error("Last.fm API key is not configured")
-        }
-
         // Fetch recent tracks
         const recentTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rizr09&api_key=${apiKey}&format=json&limit=5`,
+          "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rizr09&api_key=17249c1fdd1387432d3fc0580cc77285&format=json&limit=5",
         )
         const recentTracksData = await recentTracksResponse.json()
 
         // Fetch weekly track chart
         const weeklyTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart&user=rizr09&api_key=${apiKey}&format=json`,
+          "https://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart&user=rizr09&api_key=17249c1fdd1387432d3fc0580cc77285&format=json",
         )
         const weeklyTracksData = await weeklyTracksResponse.json()
 
         // Fetch top tracks
         const topTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=rizr09&period=1month&api_key=${apiKey}&format=json&limit=5`,
+          "https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=rizr09&period=1month&api_key=17249c1fdd1387432d3fc0580cc77285&format=json&limit=5",
         )
         const topTracksData = await topTracksResponse.json()
 
@@ -86,6 +97,26 @@ export function MusicSection() {
 
     fetchMusicData()
   }, [])
+
+  // Function to format date with GMT+7 adjustment
+  const formatDate = (dateString: string) => {
+    if (!dateString) return ""
+
+    // Parse the date string
+    const date = new Date(dateString)
+
+    // Add 7 hours for GMT+7
+    date.setHours(date.getHours() + 7)
+
+    // Format the date
+    const day = String(date.getDate()).padStart(2, "0")
+    const month = date.toLocaleString("en-US", { month: "short" })
+    const year = date.getFullYear()
+    const hours = String(date.getHours()).padStart(2, "0")
+    const minutes = String(date.getMinutes()).padStart(2, "0")
+
+    return `${day} ${month} ${year}, ${hours}:${minutes}`
+  }
 
   const renderNowPlaying = () => {
     const nowPlaying = data.recentTracks.find((track) => track["@attr"]?.nowplaying === "true")
@@ -154,6 +185,8 @@ export function MusicSection() {
     return (
       <div className="flex space-x-1 mb-4 bg-[#1a1b26] p-1 rounded-lg border border-[#3d59a1]">
         <button
+          type="button"
+          tabIndex={-1}
           onClick={() => setActiveTab("recent")}
           className={`flex items-center px-3 py-1.5 rounded text-sm ${
             activeTab === "recent" ? "bg-[#3d59a1] text-white" : "text-[#7aa2f7] hover:bg-[#24283b] transition-colors"
@@ -163,6 +196,8 @@ export function MusicSection() {
           Recent
         </button>
         <button
+          type="button"
+          tabIndex={-1}
           onClick={() => setActiveTab("weekly")}
           className={`flex items-center px-3 py-1.5 rounded text-sm ${
             activeTab === "weekly" ? "bg-[#3d59a1] text-white" : "text-[#7aa2f7] hover:bg-[#24283b] transition-colors"
@@ -172,6 +207,8 @@ export function MusicSection() {
           Weekly
         </button>
         <button
+          type="button"
+          tabIndex={-1}
           onClick={() => setActiveTab("top")}
           className={`flex items-center px-3 py-1.5 rounded text-sm ${
             activeTab === "top" ? "bg-[#3d59a1] text-white" : "text-[#7aa2f7] hover:bg-[#24283b] transition-colors"
@@ -227,7 +264,7 @@ export function MusicSection() {
                 <p className="text-[#a9b1d6]">{track.name}</p>
                 <p className="text-[#7aa2f7] text-sm">{track.artist["#text"]}</p>
                 {activeTab === "recent" && track.date && (
-                  <p className="text-[#565f89] text-xs mt-0.5">{track.date["#text"]}</p>
+                  <p className="text-[#565f89] text-xs mt-0.5">{formatDate(track.date["#text"])}</p>
                 )}
                 {activeTab === "top" && track.playcount && (
                   <p className="text-[#565f89] text-xs mt-0.5">{track.playcount} plays</p>
@@ -253,13 +290,37 @@ export function MusicSection() {
     <div className="space-y-4 animate-fadeIn">
       <h2 className="text-xl font-bold text-[#bb9af7] flex items-center">
         <Music className="mr-2 h-5 w-5 text-[#7aa2f7]" />
-        All About My Music
+        All About My Music Taste
       </h2>
 
       {data.isLoading ? (
-        <div className="text-center py-8">
-          <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#7aa2f7]"></div>
-          <p className="mt-2 text-[#a9b1d6]">Loading music data...</p>
+        <div className="flex items-center justify-center py-8">
+          <div className="bg-[#1a1b26] border border-[#3d59a1] rounded-lg p-6 w-full max-w-md">
+            <div className="flex items-center mb-6">
+              <div className="w-4 h-4 bg-[#7aa2f7] rounded-full animate-pulse mr-3"></div>
+              <div className="font-mono text-[#7aa2f7]">{loadingText}</div>
+              <div className="ml-1 font-mono text-[#7aa2f7] animate-blink">_</div>
+            </div>
+
+            <div className="space-y-2 font-mono text-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-[#7aa2f7]">Connecting to Last.fm API...</span>
+                <span className="text-[#9ece6a]">OK</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#7aa2f7]">Fetching recent tracks...</span>
+                <span className="text-[#9ece6a]">OK</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#7aa2f7]">Fetching weekly chart...</span>
+                <span className="text-[#9ece6a]">OK</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#7aa2f7]">Fetching top tracks...</span>
+                <span className="text-[#bb9af7]">IN PROGRESS</span>
+              </div>
+            </div>
+          </div>
         </div>
       ) : data.error ? (
         <div className="bg-[#1a1b26] border border-[#f7768e] text-[#f7768e] p-4 rounded-lg">{data.error}</div>

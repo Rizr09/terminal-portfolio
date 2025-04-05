@@ -12,7 +12,6 @@ import { ProjectsSection } from "./sections/projects-section"
 import { ContactSection } from "./sections/contact-section"
 import { HelpSection } from "./sections/help-section"
 import { WelcomeMessage } from "./welcome-message"
-// Removed NowPlaying import
 import { PublicationSection } from "./sections/publication-section"
 import { SkillsSection } from "./sections/skills-section"
 import { ExperienceSection } from "./sections/experience-section"
@@ -40,6 +39,14 @@ export default function Terminal() {
 
     return () => clearInterval(timer)
   }, [])
+
+  // Format time with colons instead of dots
+  const formatTime = (date: Date) => {
+    const hours = String(date.getHours()).padStart(2, "0")
+    const minutes = String(date.getMinutes()).padStart(2, "0")
+    const seconds = String(date.getSeconds()).padStart(2, "0")
+    return `${hours}:${minutes}:${seconds}`
+  }
 
   // Show welcome message after loading
   const handleLoadingComplete = () => {
@@ -85,16 +92,13 @@ export default function Terminal() {
     } else if (trimmedInput === "music" || trimmedInput === "tunes") {
       output = <MusicSection />
       setCurrentSection("music")
-    } else if (trimmedInput.startsWith("goto ")) {
-      const url = trimmedInput.substring(5)
-      if (url.startsWith("http")) {
-        window.open(url, "_blank")
-        output = <p className="text-[#9ece6a]">Opening {url} in a new tab...</p>
-      } else {
-        output = <p className="text-[#f7768e]">Invalid URL format. Use http:// or https://</p>
-      }
+    } else if (trimmedInput === "resume") {
+      window.open("https://drive.google.com/file/d/1fP5ZLdd3qM-7q6_0M8BPs01H9TWENhkm/", "_blank")
+      output = <p className="text-[#9ece6a]">Opening resume in a new tab...</p>
     } else if (trimmedInput === "") {
-      output = null
+      // Just add a new empty command with no output for Unix-like behavior
+      setCommands((prev) => [...prev, { input, output: null }])
+      return
     } else {
       output = (
         <p className="text-[#f7768e]">
@@ -176,7 +180,7 @@ export default function Terminal() {
         <div className="flex items-center space-x-3 text-[#a9b1d6] text-xs">
           <div className="flex items-center">
             <Clock className="h-3 w-3 mr-1 text-[#7dcfff]" />
-            <span>{time.toLocaleTimeString()}</span>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatTime(time)}</span>
           </div>
         </div>
       </div>
@@ -204,10 +208,9 @@ export default function Terminal() {
       </div>
 
       <div className="mt-4 flex flex-col items-center space-y-4">
-        {/* Removed NowPlaying component */}
         <div className="text-[#7aa2f7] text-xs text-center">
           <p>
-            Tip: Use keyboard shortcuts (Alt + key): [A]bout, [X]perience, [S]kills, [P]rojects, [B]ublication,
+            Tip: Use keyboard shortcuts (Alt + key): [A]bout, e[X]perience, [S]kills, [P]rojects, pu[B]lication,
             [C]ontact, [M]usic, [H]elp, [W]elcome
           </p>
         </div>

@@ -69,7 +69,7 @@ export default function CommandLine({ onExecute }: CommandLineProps) {
         "cls",
         "home",
         "welcome",
-        "goto ",
+        "resume",
       ]
       const match = commands.find((cmd) => cmd.startsWith(input.toLowerCase()))
       if (match) {

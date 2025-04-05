@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, Linkedin, Award } from "lucide-react"
+import { FileText, ExternalLink, Award, Linkedin } from "lucide-react"
 
 export function ResumeSection() {
   return (

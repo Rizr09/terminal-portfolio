@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Send, Github, Globe, Linkedin, FileText } from "lucide-react"
+import { Mail, Send, Github, Globe, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -141,6 +141,15 @@ export function ContactSection() {
                 <span>rizky2004cool@gmail.com</span>
               </a>
               <a
+                href="https://rizr09.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors"
+              >
+                <Globe className="mr-2 h-4 w-4" />
+                <span>rizr09.me</span>
+              </a>
+              <a
                 href="https://www.linkedin.com/in/rizr09/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -157,15 +166,6 @@ export function ContactSection() {
               >
                 <Github className="mr-2 h-4 w-4" />
                 <span>github.com/rizr09</span>
-              </a>
-              <a
-                href="https://rizr09.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors"
-              >
-                <Globe className="mr-2 h-4 w-4" />
-                <span>rizr09.me</span>
               </a>
             </div>
           </div>

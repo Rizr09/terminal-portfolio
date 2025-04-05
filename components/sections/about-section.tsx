@@ -1,4 +1,4 @@
-import { User, Calendar, MapPin, Briefcase, GraduationCap, Mail, Globe, Linkedin, FileText, Award } from "lucide-react"
+import { User, Calendar, MapPin, Briefcase, GraduationCap, Mail, Globe, Linkedin, Award } from "lucide-react"
 
 export function AboutSection() {
   return (
@@ -22,24 +22,13 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <h3 className="text-[#7dcfff] flex items-center">
-              <FileText className="mr-2 h-4 w-4" />
+              <Briefcase className="mr-2 h-4 w-4" />
               Contact Information
             </h3>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail className="mr-2 h-4 w-4 text-[#7aa2f7]" />
                 <span>rizky2004cool@gmail.com</span>
-              </li>
-              <li className="flex items-center">
-                <Linkedin className="mr-2 h-4 w-4 text-[#7aa2f7]" />
-                <a
-                  href="https://www.linkedin.com/in/rizr09/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#7aa2f7]"
-                >
-                  linkedin.com/in/rizr09
-                </a>
               </li>
               <li className="flex items-center">
                 <Globe className="mr-2 h-4 w-4 text-[#7aa2f7]" />
@@ -50,6 +39,17 @@ export function AboutSection() {
                   className="hover:text-[#7aa2f7]"
                 >
                   rizr09.me
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Linkedin className="mr-2 h-4 w-4 text-[#7aa2f7]" />
+                <a
+                  href="https://www.linkedin.com/in/rizr09/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#7aa2f7]"
+                >
+                  linkedin.com/in/rizr09
                 </a>
               </li>
             </ul>
@@ -95,11 +95,11 @@ export function AboutSection() {
         <div className="flex items-center space-x-4 text-sm text-[#7aa2f7]">
           <div className="flex items-center">
             <MapPin className="mr-1 h-4 w-4" />
-            <span>Jakarta, Indonesia</span>
+            <span>Indonesia</span>
           </div>
           <div className="flex items-center">
             <Calendar className="mr-1 h-4 w-4" />
-            <span>Open to work</span>
+            <span>Available for new opportunities</span>
           </div>
         </div>
       </div>

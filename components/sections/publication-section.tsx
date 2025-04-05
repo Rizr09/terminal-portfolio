@@ -22,7 +22,10 @@ export function PublicationSection() {
           </div>
           <div className="mt-3">
             <p>
-              This paper examines the relationship between programming language popularity (support) and job market demand in Indonesia. Using a quantitative descriptive approach, it analyzes PyPL and TIOBE indices over 12 months and job postings from LinkedIn. Findings suggest Python as the most recommended language, balancing high demand (1,675 jobs) and strong support (TIOBE: 12.60%, PyPL: 29.80%).
+              This paper examines the relationship between programming language popularity (support) and job market
+              demand in Indonesia. Using a quantitative descriptive approach, it analyzes PyPL and TIOBE indices over 12
+              months and job postings from LinkedIn. Findings suggest Python as the most recommended language, balancing
+              high demand (1,675 jobs) and strong support (TIOBE: 12.60%, PyPL: 29.80%).
             </p>
           </div>
           <div className="mt-4">
@@ -46,7 +49,10 @@ export function PublicationSection() {
               Indicators
             </div>
             <p className="mt-2">
-              My thesis research improves stock price prediction by incorporating deep learning, sentiment analysis, and technical indicators. Comparing IndoBERT (F1 score: 81%) and lexicon-based methods (F1 score: 22%), I tested six deep learning models. The best model, multivariate LSTM, achieved an RMSE of 257.32 for future stock price forecasting.
+              My thesis research improves stock price prediction by incorporating deep learning, sentiment analysis, and
+              technical indicators. Comparing IndoBERT (F1 score: 81%) and lexicon-based methods (F1 score: 22%), I
+              tested six deep learning models. The best model, multivariate LSTM, achieved an RMSE of 257.32 for future
+              stock price forecasting.
             </p>
           </div>
         </div>

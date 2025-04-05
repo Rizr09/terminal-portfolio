@@ -122,7 +122,7 @@ export function ExperienceSection() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#7aa2f7] mr-2">-</span>
-                    <span>Object-Oriented Programming - Aug - Dec 2023</span>
+                    <span>Object-Oriented Programming - August - December 2023</span>
                   </li>
                 </ul>
               </li>
