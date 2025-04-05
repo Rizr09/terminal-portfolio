@@ -21,8 +21,15 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
         />
+        <style>{`
+          .font-fira-code {
+            font-family: 'Fira Code', monospace;
+            font-feature-settings: "liga" 1;
+            text-rendering: optimizeLegibility;
+          }
+        `}</style>
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>

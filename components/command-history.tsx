@@ -10,7 +10,7 @@ interface CommandHistoryProps {
 
 export default function CommandHistory({ commands }: CommandHistoryProps) {
   return (
-    <div className="space-y-1 overflow-x-hidden">
+    <div className="space-y-1 overflow-x-hidden font-fira-code">
       {commands.map((command, index) => (
         <div key={index} className={command.output ? "space-y-2 mb-3" : "mb-1"}>
           <div className="flex items-center flex-wrap">

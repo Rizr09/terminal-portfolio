@@ -162,14 +162,14 @@ export default function Terminal() {
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col">
       <div className="bg-[#1a1b26] rounded-t-lg p-2 border-b border-[#3d59a1] flex items-center">
-        <div className="flex-1 text-[#a9b1d6] text-sm font-mono flex items-center">
+        <div className="flex-1 text-[#a9b1d6] text-sm font-fira-code flex items-center">
           <span className="bg-[#7aa2f7] text-[#1a1b26] px-2 py-1 rounded mr-2 font-bold">
             {currentSection ? currentSection : "home"}
           </span>
           <span className="text-[#7dcfff]">~</span>
           <span className="text-[#a9b1d6]">/portfolio $</span>
         </div>
-        <div className="flex items-center space-x-3 text-[#a9b1d6] text-xs">
+        <div className="flex items-center space-x-3 text-[#a9b1d6] text-xs font-fira-code">
           <div className="flex items-center">
             <Clock className="h-3 w-3 mr-1 text-[#7dcfff]" />
             <span>{time.toLocaleTimeString()}</span>
@@ -181,7 +181,7 @@ export default function Terminal() {
         ref={terminalRef}
         className={cn(
           "bg-[#1a1b26] p-4 rounded-b-lg h-[70vh] overflow-y-auto overflow-x-hidden",
-          "font-mono text-[#a9b1d6] text-sm leading-relaxed",
+          "font-fira-code text-[#a9b1d6] text-sm leading-relaxed",
           "scrollbar-thin scrollbar-thumb-[#3d59a1] scrollbar-track-[#1a1b26]",
         )}
       >
@@ -200,7 +200,7 @@ export default function Terminal() {
       </div>
 
       <div className="mt-4 flex flex-col items-center space-y-4">
-        <div className="text-[#7aa2f7] text-xs text-center">
+        <div className="text-[#7aa2f7] text-xs text-center font-fira-code">
           <p>
             Tip: Use keyboard shortcuts (Alt + key): [A]bout, e[X]perience, [S]kills, [P]rojects, pu[B]lication,
             [C]ontact, [M]usic, [H]elp, [W]elcome
