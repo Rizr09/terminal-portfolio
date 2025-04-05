@@ -40,14 +40,6 @@ export default function Terminal() {
     return () => clearInterval(timer)
   }, [])
 
-  // Format time with colons instead of dots
-  const formatTime = (date: Date) => {
-    const hours = String(date.getHours()).padStart(2, "0")
-    const minutes = String(date.getMinutes()).padStart(2, "0")
-    const seconds = String(date.getSeconds()).padStart(2, "0")
-    return `${hours}:${minutes}:${seconds}`
-  }
-
   // Show welcome message after loading
   const handleLoadingComplete = () => {
     setIsLoading(false)
@@ -180,7 +172,7 @@ export default function Terminal() {
         <div className="flex items-center space-x-3 text-[#a9b1d6] text-xs">
           <div className="flex items-center">
             <Clock className="h-3 w-3 mr-1 text-[#7dcfff]" />
-            <span style={{ fontFamily: "'JetBrains Mono', monospace" }}>{formatTime(time)}</span>
+            <span>{time.toLocaleTimeString()}</span>
           </div>
         </div>
       </div>

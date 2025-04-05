@@ -135,8 +135,3 @@
   animation: blink 1s step-end infinite;
 }
 
-/* JetBrains Mono font class */
-.font-jetbrains {
-  font-family: "JetBrains Mono", monospace;
-}
-
