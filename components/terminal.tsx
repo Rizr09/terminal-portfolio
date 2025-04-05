@@ -3,7 +3,6 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
-import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import CommandLine from "./command-line"
 import CommandHistory from "./command-history"
@@ -28,7 +27,6 @@ export default function Terminal() {
   const [commands, setCommands] = useState<Command[]>([])
   const [currentSection, setCurrentSection] = useState<string | null>(null)
   const terminalRef = useRef<HTMLDivElement>(null)
-  const router = useRouter()
   const [time, setTime] = useState(new Date())
   const [isLoading, setIsLoading] = useState(true)
 
