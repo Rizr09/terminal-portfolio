@@ -99,7 +99,7 @@ export function AboutSection() {
           </div>
           <div className="flex items-center">
             <Calendar className="mr-1 h-4 w-4" />
-            <span>Available for new Works</span>
+            <span>Open to Work</span>
           </div>
         </div>
       </div>
