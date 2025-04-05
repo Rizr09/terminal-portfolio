@@ -180,7 +180,7 @@ export default function Terminal() {
       <div
         ref={terminalRef}
         className={cn(
-          "bg-[#1a1b26] p-4 rounded-b-lg h-[70vh] overflow-y-auto",
+          "bg-[#1a1b26] p-4 rounded-b-lg h-[70vh] overflow-y-auto overflow-x-hidden",
           "font-mono text-[#a9b1d6] text-sm leading-relaxed",
           "scrollbar-thin scrollbar-thumb-[#3d59a1] scrollbar-track-[#1a1b26]",
         )}

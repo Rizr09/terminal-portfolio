@@ -10,10 +10,10 @@ interface CommandHistoryProps {
 
 export default function CommandHistory({ commands }: CommandHistoryProps) {
   return (
-    <div className="space-y-1">
+    <div className="space-y-1 overflow-x-hidden">
       {commands.map((command, index) => (
         <div key={index} className={command.output ? "space-y-2 mb-3" : "mb-1"}>
-          <div className="flex items-center">
+          <div className="flex items-center flex-wrap">
             <div className="flex items-center mr-2">
               <span className="text-[#7dcfff]">guest</span>
               <span className="text-[#a9b1d6]">@</span>
@@ -23,9 +23,9 @@ export default function CommandHistory({ commands }: CommandHistoryProps) {
               <span className="text-[#a9b1d6]">$</span>
               <ArrowRight className="h-4 w-4 ml-2 text-[#9ece6a]" />
             </div>
-            <span className="text-[#a9b1d6]">{command.input}</span>
+            <span className="text-[#a9b1d6] break-all">{command.input}</span>
           </div>
-          {command.output && <div>{command.output}</div>}
+          {command.output && <div className="break-words">{command.output}</div>}
         </div>
       ))}
     </div>

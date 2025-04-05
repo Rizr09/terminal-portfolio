@@ -91,7 +91,7 @@ export default function CommandLine({ onExecute }: CommandLineProps) {
   }, [])
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center mt-2">
+    <form onSubmit={handleSubmit} className="flex items-center flex-wrap mt-2">
       <div className="flex items-center mr-2">
         <span className="text-[#7dcfff]">guest</span>
         <span className="text-[#a9b1d6]">@</span>
@@ -107,7 +107,7 @@ export default function CommandLine({ onExecute }: CommandLineProps) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="flex-1 bg-transparent outline-none border-none text-[#a9b1d6]"
+        className="flex-1 bg-transparent outline-none border-none text-[#a9b1d6] min-w-0"
         aria-label="Command input"
         autoComplete="off"
         spellCheck="false"
