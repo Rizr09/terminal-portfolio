@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       "Developed and optimized a machine learning model using 5 years of data (2019-2024) to forecast prices for 10 key staple foods in West Java, achieving 60-day predictions with an RMSE between 900-1500 per item. Implemented the deep learning solution leveraging TensorFlow, utilized KerasTuner/TensorBoard for hyperparameter tuning, and built interactive forecast visualizations with Plotly.",
     technologies: ["Python", "TensorFlow", "Bidirectional LSTM", "Time Series Analysis", "KerasTuner", "Plotly"],
-    demo: "https://www.kaggle.com/code/rizr09/antasena",
+    github: "https://www.kaggle.com/code/rizr09/antasena",
     year: "2024",
   },
   {
@@ -92,12 +92,12 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      <div className="text-[#7aa2f7] text-sm mt-4">
+      {/* <div className="text-[#7aa2f7] text-sm mt-4">
         <p>
           You can also use the <span className="text-[#bb9af7]">goto [url]</span> command to open any project link if
           available.
         </p>
-      </div>
+      </div> */}
 
       <div className="border-t border-[#3d59a1] pt-2 text-[#7aa2f7] text-sm">
         <p>
