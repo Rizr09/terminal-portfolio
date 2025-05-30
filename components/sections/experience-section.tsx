@@ -12,16 +12,16 @@ export function ExperienceSection() {
         <div className="bg-[#24283b] p-4 rounded-lg border border-[#3d59a1]">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <h3 className="text-[#7dcfff] font-medium">Fixed Income Analyst Intern</h3>
-              <div className="text-[#7aa2f7]">Directorate General of Budget Financing & Risk Management</div>
+              <h3 className="text-[#7dcfff] font-medium">Forecast Analyst Intern</h3>
+              <div className="text-[#7aa2f7]">Ministry of Finance, Republic of Indonesia</div>
               <div className="flex items-center text-sm mt-1 sm:hidden">
                 <Calendar className="h-4 w-4 mr-1.5 flex-shrink-0 text-[#7aa2f7]" />
-                <span>Mar 2025 - Present</span>
+                <span>Mar - May 2025</span>
               </div>
             </div>
             <div className="hidden sm:flex items-center text-sm whitespace-nowrap">
               <Calendar className="h-4 w-4 mr-1.5 flex-shrink-0 text-[#7aa2f7]" />
-              <span>Mar 2025 - Present</span>
+              <span>Mar - May 2025</span>
             </div>
           </div>
           <div className="mt-3">
@@ -29,8 +29,15 @@ export function ExperienceSection() {
               <li className="flex items-start">
                 <span className="text-[#9ece6a] mr-2">•</span>
                 <span>
-                  Seeking the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
-                  sentiment factors in Indonesia, achieving 0.08 RMSE
+                  Applied LLMs to automate sentiment analysis on 4,500+ Indonesia economic news articles (2017-2025) 
+                  sourced from Bloomberg Terminal, tailored for fixed income investor insights.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#9ece6a] mr-2">•</span>
+                <span>
+                  Seek fair value of the upcoming SBSN issuance in Indonesia using 6 machine learning models with
+                  macroeconomic and market sentiment data, achieving 0.08 RMSE.
                 </span>
               </li>
             </ul>
@@ -137,12 +144,12 @@ export function ExperienceSection() {
               <div className="text-[#7aa2f7]">Centre for Communication, Media and Culture Studies Unpad</div>
               <div className="flex items-center text-sm mt-1 sm:hidden">
                 <Calendar className="h-4 w-4 mr-1.5 flex-shrink-0 text-[#7aa2f7]" />
-                <span>May 2024 - Jul 2024</span>
+                <span>May - Jul 2024</span>
               </div>
             </div>
             <div className="hidden sm:flex items-center text-sm whitespace-nowrap">
               <Calendar className="h-4 w-4 mr-1.5 flex-shrink-0 text-[#7aa2f7]" />
-              <span>May 2024 - Jul 2024</span>
+              <span>May - Jul 2024</span>
             </div>
           </div>
           <div className="mt-3">

@@ -83,7 +83,7 @@ export default function Terminal() {
       output = <MusicSection />
       setCurrentSection("music")
     } else if (trimmedInput === "resume") {
-      window.open("https://drive.google.com/file/d/1fP5ZLdd3qM-7q6_0M8BPs01H9TWENhkm/", "_blank")
+      window.open("https://drive.google.com/file/d/1sHTUFRoxnxFiUntWF_elOmwidHgH8F6o/", "_blank")
       output = <p className="text-[#9ece6a]">Opening resume in a new tab...</p>
     } else if (trimmedInput === "") {
       // Just add a new empty command with no output for Unix-like behavior

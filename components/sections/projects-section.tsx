@@ -11,6 +11,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "LLM-Based RAG Chatbot for Financial Market Insights",
+    description:
+      "Engineered a pipeline to process 11 market outlook reports (300 pages), producing 959 text segments and indexing them in ChromaDB for accurate retrieval. Implemented a Retrieval-Augmented Generation QA flow with Gemini 2.5 Flash Preview, fetching the top 6 documents in under 300 ms on average and delivering complete answers in under 1s.",
+    technologies: ["Python", "ChromaDB", "Gemini 2.5 Flash Preview"],
+    github: "https://github.com/Rizr09/RAG-Chatbot/",
+    year: "2025",
+  },
+  {
     title: "Indonesia Portfolio Optimization Dashboard",
     description:
       "Developed a Stock Portfolio Optimization Dashboard with Streamlit, including interactive visualizations of the efficient frontier and key portfolio metrics. Applied a variety of optimization methods, including the Sharpe Ratio, Volatility, Sortino Ratio, Tracking Error, Information Ratio, and Conditional Value-at-Risk (CVaR).",
@@ -32,7 +40,7 @@ const projects: Project[] = [
       "Contributed to a capstone project using Xception to detect 6 dental and 7 oral diseases, achieving 80% accuracy (76% validation). Part of the Bangkit Academy program led by Google, GoTo, & Traveloka.",
     technologies: ["Python", "TensorFlow", "Xception", "Computer Vision", "Mobile App Development"],
     github: "https://github.com/mnnur/Dentalify-Dental-Identify",
-    year: "2023-2024",
+    year: "2023",
   },
 ]
 

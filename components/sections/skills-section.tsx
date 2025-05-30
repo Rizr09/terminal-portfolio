@@ -31,6 +31,7 @@ export function SkillsSection() {
           <div className="flex flex-wrap gap-2">
             {[
               "LaTeX",
+              "Bloomberg Terminal",
               "Power BI",
               "UIPath Studio",
               "Tableau",
@@ -41,6 +42,7 @@ export function SkillsSection() {
               "TensorFlow",
               "PyTorch",
               "Streamlit",
+              "Zapier",
             ].map((skill) => (
               <span key={skill} className="px-3 py-1.5 bg-[#1a1b26] border border-[#3d59a1] rounded-md text-[#7aa2f7]">
                 {skill}
