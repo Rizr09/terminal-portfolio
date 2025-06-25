@@ -11,9 +11,9 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "LLM-Based RAG Chatbot for Financial Market Insights",
+    title: " RAG-Powered LLM Q&A System with Local Document Integration",
     description:
-      "Engineered a pipeline to process 11 market outlook reports (300 pages), producing 959 text segments and indexing them in ChromaDB for accurate retrieval. Implemented a Retrieval-Augmented Generation QA flow with Gemini 2.5 Flash Preview, fetching the top 6 documents in under 300 ms on average and delivering complete answers in under 1s.",
+      "Chunked & embedded 251 legal documents into vector chunks in ChromaDB, enabling average top-5 similarity searches in 344 ms. Built dual-interface RAG pipeline (web app & Telegram bot) with context-aware chat memory, using Gemini 2.5 Flash Preview to deliver end-to-end responses in 6744 ms on average.",
     technologies: ["Python", "ChromaDB", "Gemini 2.5 Flash Preview"],
     github: "https://github.com/Rizr09/RAG-Chatbot/",
     year: "2025",

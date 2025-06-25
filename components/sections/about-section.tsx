@@ -79,14 +79,14 @@ export function AboutSection() {
         <div className="space-y-2">
           <h3 className="text-[#7dcfff] flex items-center">
             <Briefcase className="mr-2 h-4 w-4" />
-            Current Position
+            Last Position
           </h3>
           <div className="bg-[#24283b] p-3 rounded-lg border border-[#3d59a1]">
             <div className="font-medium text-[#bb9af7]">Forecast Analyst Intern</div>
             <div className="text-[#7aa2f7]">Directorate General of Budget Financing & Risk Management</div>
             <div className="text-sm">March - May 2025</div>
             <div className="mt-2">
-              Seeking the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
+              Seek the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
               sentiment factors in Indonesia, achieving 0.08 RMSE.
             </div>
           </div>
