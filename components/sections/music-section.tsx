@@ -61,21 +61,15 @@ export function MusicSection() {
     const fetchMusicData = async () => {
       try {
         // Fetch recent tracks
-        const recentTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rizr09&api_key=${process.env.LAST_FM}&format=json&limit=5`,
-        )
+        const recentTracksResponse = await fetch('/api/music?type=recent')
         const recentTracksData = await recentTracksResponse.json()
   
         // Fetch weekly track chart
-        const weeklyTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart&user=rizr09&api_key=${process.env.LAST_FM}&format=json`,
-        )
+        const weeklyTracksResponse = await fetch('/api/music?type=weekly')
         const weeklyTracksData = await weeklyTracksResponse.json()
   
         // Fetch top tracks
-        const topTracksResponse = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=rizr09&period=1month&api_key=${process.env.LAST_FM}&format=json&limit=5`,
-        )
+        const topTracksResponse = await fetch('/api/music?type=top')
         const topTracksData = await topTracksResponse.json()
 
         setData({
