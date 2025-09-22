@@ -11,20 +11,12 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: " RAG-Powered LLM Q&A System with Local Document Integration",
+    title: "Dentalify - Dental and Oral Disease Detection",
     description:
-      "Chunked & embedded 251 legal documents into vector chunks in ChromaDB, enabling average top-5 similarity searches in 344 ms. Built dual-interface RAG pipeline (web app & Telegram bot) with context-aware chat memory, using Gemini 2.5 Flash Preview to deliver end-to-end responses in 6744 ms on average.",
-    technologies: ["Python", "ChromaDB", "Gemini 2.5 Flash Preview"],
-    github: "https://github.com/Rizr09/RAG-Chatbot/",
-    year: "2025",
-  },
-  {
-    title: "Indonesia Portfolio Optimization Dashboard",
-    description:
-      "Developed a Stock Portfolio Optimization Dashboard with Streamlit, including interactive visualizations of the efficient frontier and key portfolio metrics. Applied a variety of optimization methods, including the Sharpe Ratio, Volatility, Sortino Ratio, Tracking Error, Information Ratio, and Conditional Value-at-Risk (CVaR).",
-    technologies: ["Python", "Markowitz Model", "Convex Optimization"],
-    demo: "https://portfolio-optimization-id.streamlit.app/",
-    year: "2024",
+      "Contributed to a capstone project using Xception to detect 6 dental and 7 oral diseases, achieving 80% accuracy (76% validation). Part of the Bangkit Academy program led by Google, GoTo, & Traveloka.",
+    technologies: ["Python", "TensorFlow", "Xception", "Computer Vision", "Mobile App Development"],
+    github: "https://github.com/mnnur/Dentalify-Dental-Identify",
+    year: "2023",
   },
   {
     title: "Multivariate Time Series Forecasting of Staple Food Prices",
@@ -35,12 +27,20 @@ const projects: Project[] = [
     year: "2024",
   },
   {
-    title: "Dentalify - Dental and Oral Disease Detection",
+    title: "Indonesia Portfolio Optimization Dashboard",
     description:
-      "Contributed to a capstone project using Xception to detect 6 dental and 7 oral diseases, achieving 80% accuracy (76% validation). Part of the Bangkit Academy program led by Google, GoTo, & Traveloka.",
-    technologies: ["Python", "TensorFlow", "Xception", "Computer Vision", "Mobile App Development"],
-    github: "https://github.com/mnnur/Dentalify-Dental-Identify",
-    year: "2023",
+      "Developed a Stock Portfolio Optimization Dashboard with Streamlit, including interactive visualizations of the efficient frontier and key portfolio metrics. Applied a variety of optimization methods, including the Sharpe Ratio, Volatility, Sortino Ratio, Tracking Error, Information Ratio, and Conditional Value-at-Risk (CVaR).",
+    technologies: ["Python", "Markowitz Model", "Convex Optimization"],
+    demo: "https://portfolio-optimization-id.streamlit.app/",
+    year: "2024",
+  },
+  {
+    title: "RAG-Powered Chatbot System with Telegram Integration",
+    description:
+      "Chunked & embedded 251 legal documents into vector chunks in ChromaDB, enabling average top-5 similarity searches in 344 ms. Built dual-interface RAG pipeline (web app & Telegram bot) with context-aware chat memory, using Gemini 2.5 Flash Preview to deliver end-to-end responses in 6744 ms on average.",
+    technologies: ["Python", "ChromaDB", "Gemini 2.5 Flash Preview"],
+    github: "https://github.com/Rizr09/RAG-Chatbot/",
+    year: "2025",
   },
 ]
 

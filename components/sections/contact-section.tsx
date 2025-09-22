@@ -21,13 +21,13 @@ export function ContactSection() {
               <h3 className="text-[#7dcfff]">Connect with me</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:rizky2004cool@gmail.com"
+                  href="mailto:business.rizr09@gmail.com"
                   className="flex items-center text-[#a9b1d6] hover:text-[#7aa2f7] transition-colors"
                 >
                   <Mail className="mr-3 h-5 w-5" />
-                  <span>rizky2004cool@gmail.com</span>
+                  <span>business.rizr09 at gmail dot com</span>
                 </a>
-                <a
+                {/* <a
                   href="https://rizr09.me"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -35,7 +35,7 @@ export function ContactSection() {
                 >
                   <Globe className="mr-3 h-5 w-5" />
                   <span>rizr09.me</span>
-                </a>
+                </a> */}
                 <a
                   href="https://www.linkedin.com/in/rizr09/"
                   target="_blank"
@@ -61,7 +61,7 @@ export function ContactSection() {
           <div className="space-y-4">
             <div className="space-y-2">
               <h3 className="text-[#7dcfff]">Location</h3>
-              <p className="text-[#a9b1d6]">Jakarta, Indonesia</p>
+              <p className="text-[#a9b1d6]">Balikpapan, Indonesia</p>
               <p className="text-[#7aa2f7] text-sm">Available for remote collaboration worldwide</p>
             </div>
           </div>

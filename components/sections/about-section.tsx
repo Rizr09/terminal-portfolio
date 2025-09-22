@@ -10,7 +10,7 @@ export function AboutSection() {
 
       <div className="space-y-4 text-[#a9b1d6]">
         <div className="space-y-2">
-          <h3 className="text-[#7dcfff] text-lg">Rizky Ramadhan Sudjarmono</h3>
+          <h3 className="text-[#7dcfff] text-lg">Rizky Ramadhan Sudjarmono, S.Kom.</h3>
           <p>
             Fresh graduate of Computer Science from Padjadjaran University with a passion for data science, financial
             engineering, and automation. Experienced in Python, SQL, and Tableau, with strong skills in project
@@ -28,9 +28,9 @@ export function AboutSection() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail className="mr-2 h-4 w-4 text-[#7aa2f7]" />
-                <span>rizky2004cool@gmail.com</span>
+                <span>business.rizr09 at gmail dot com</span>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <Globe className="mr-2 h-4 w-4 text-[#7aa2f7]" />
                 <a
                   href="https://rizr09.me"
@@ -40,7 +40,7 @@ export function AboutSection() {
                 >
                   rizr09.me
                 </a>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <Linkedin className="mr-2 h-4 w-4 text-[#7aa2f7]" />
                 <a
@@ -79,15 +79,15 @@ export function AboutSection() {
         <div className="space-y-2">
           <h3 className="text-[#7dcfff] flex items-center">
             <Briefcase className="mr-2 h-4 w-4" />
-            Last Position
+            Current Position
           </h3>
           <div className="bg-[#24283b] p-3 rounded-lg border border-[#3d59a1]">
-            <div className="font-medium text-[#bb9af7]">Forecast Analyst Intern</div>
-            <div className="text-[#7aa2f7]">Directorate General of Budget Financing & Risk Management</div>
-            <div className="text-sm">March - May 2025</div>
+            <div className="font-medium text-[#bb9af7]">TEC Associate - IT Operations & Support</div>
+            <div className="text-[#7aa2f7]">Telkomsel</div>
+            <div className="text-sm">Sep 2025 - Present</div>
             <div className="mt-2">
-              Seek the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
-              sentiment factors in Indonesia, achieving 0.08 RMSE.
+              {/* Seek the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
+              sentiment factors in Indonesia, achieving 0.08 RMSE. */}
             </div>
           </div>
         </div>
