@@ -69,6 +69,13 @@ const experiences: ExperienceItem[] = [
       "Seek fair value of the upcoming SBSN issuance in Indonesia using 6 machine learning models with macroeconomic and market sentiment data, achieving 0.08 RMSE."
     ]
   },
+  {
+    role: "TEC Associate - IT Operations & Support",
+    organization: "Telkomsel",
+    period: "Sep 2025 - Present",
+    bullets: [
+    ]
+  },
 ]
 
 export function ExperienceSection() {
