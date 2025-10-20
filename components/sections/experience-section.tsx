@@ -70,10 +70,11 @@ const experiences: ExperienceItem[] = [
     ]
   },
   {
-    role: "TEC Associate - IT Operations & Support",
+    role: "TEC Associate - IT Operations & Business Support",
     organization: "Telkomsel",
-    period: "Sep 2025 - Present",
+    period: "Oct 2025 - Present",
     bullets: [
+      "Managing and coordinating decommission of 32 data center devices across the Kalimantan region, cutting costs by more than Rp 400 million."
     ]
   },
 ]

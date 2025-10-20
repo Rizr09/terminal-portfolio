@@ -28,7 +28,7 @@ export function AboutSection() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail className="mr-2 h-4 w-4 text-[#7aa2f7]" />
-                <span>business.rizr09 at gmail dot com</span>
+                <span>business dot rizr09 at gmail dot com</span>
               </li>
               {/* <li className="flex items-center">
                 <Globe className="mr-2 h-4 w-4 text-[#7aa2f7]" />
@@ -82,12 +82,11 @@ export function AboutSection() {
             Current Position
           </h3>
           <div className="bg-[#24283b] p-3 rounded-lg border border-[#3d59a1]">
-            <div className="font-medium text-[#bb9af7]">TEC Associate - IT Operations & Support</div>
+            <div className="font-medium text-[#bb9af7]">TEC Associate - IT Operations & Business Support</div>
             <div className="text-[#7aa2f7]">Telkomsel</div>
-            <div className="text-sm">Sep 2025 - Present</div>
+            <div className="text-sm">Oct 2025 - Present</div>
             <div className="mt-2">
-              {/* Seek the fair value of the upcoming Sukuk issuance by incorporating the macroeconomic and market
-              sentiment factors in Indonesia, achieving 0.08 RMSE. */}
+              Part of Data Center Operations and Software Development Squad.
             </div>
           </div>
         </div>
