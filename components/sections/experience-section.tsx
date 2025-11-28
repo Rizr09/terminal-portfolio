@@ -74,7 +74,16 @@ const experiences: ExperienceItem[] = [
     organization: "Telkomsel",
     period: "Oct 2025 - Present",
     bullets: [
-      "Managing and coordinating decommission of 32 data center devices across the Kalimantan region, cutting costs by more than Rp 400 million."
+      "Part of software development and data center operations squad."
+    ]
+  },
+
+  {
+    role: "Machine Learning Engineer",
+    organization: "PLN Indonesia Power",
+    period: "Nov 2025 - Present",
+    bullets: [
+      "Freelance."
     ]
   },
 ]
